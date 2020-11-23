@@ -11,6 +11,9 @@ class Hero:
         self.name = name
         self.starting_health = starting_health
         self.current_health = starting_health
+
+    def __str__(self):
+        pass
     
     def fight(self, opponent):
         
@@ -18,20 +21,15 @@ class Hero:
         # Phases to implement:
         #1) randomly choose winner,
         #Hint: Look into random library, more specifically the choice method
-
-        hero1 = Hero("Marty Martian")
-        hero2 = Hero("Henry Hammer")
-
-        duelers = [hero1, hero2]
-        return random.choice(duelers)
+        fightwinner = random.choice([self, opponent])
+        print(fightwinner.name)
+        return fightwinner
 
 
 
 if __name__ == "__main__":
-    # If you run this file from the terminal
-    # this block is executed.
-    hero1 = Hero("Wonder Woman")
-    hero2 = Hero("Dumbledore")
+    hero1 = Hero("Marty Martian")
+    hero2 = Hero("Henry Hammer")
 
     hero1.fight(hero2)
     
