@@ -1,3 +1,5 @@
+import random
+
 class Ability:
     def __init__(self, name, max_damage):
 
@@ -12,3 +14,10 @@ class Ability:
       # Pick a random value between 0 and self.max_damage
       attack_value = random.randint(0,self.max_damage)
       return attack_value
+
+if __name__ == "__main__":
+    # If you run this file from the terminal
+    # this block is executed.
+    ability = Ability("Debugging Ability", 20)
+    print(ability.name)
+    print(ability.attack())
