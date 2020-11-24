@@ -12,7 +12,7 @@ class Ability:
       ''' Return a value between 0 and the value set by self.max_damage.'''
 
       # Pick a random value between 0 and self.max_damage
-      attack_value = random.randint(0,self.max_damage)
+      attack_value = random.randint(0,int(self.max_damage))
       return attack_value
 
 if __name__ == "__main__":

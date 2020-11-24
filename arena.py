@@ -6,11 +6,10 @@ from team import Team
 
 class Arena:
     def __init__(self):
-        self.team_one: None
-        self.team_two: None
+        self.team_one = None
+        self.team_two = None
         
-        # TODO: create instance variables named team_one and team_two that
-        # will hold our teams.
+        
 
     def create_ability(self):
         '''Prompt for Ability information.
@@ -26,9 +25,7 @@ class Arena:
         '''Prompt user for Weapon information
             return Weapon with values from user input.
         '''
-        # TODO: This method will allow a user to create a weapon.
-        # Prompt the user for the necessary information to create a new weapon object.
-        # return the new weapon object.
+        
         weapon = input("What is the name of your weapon? ")
         max_damage = input("How hard does it hit? ")
         
@@ -38,9 +35,7 @@ class Arena:
         '''Prompt user for Armor information
           return Armor with values from user input.
         '''
-        # TODO:This method will allow a user to create a piece of armor.
-        #  Prompt the user for the necessary information to create a new armor object.
-        #  return the new armor object with values set by user.
+        
         armor_name = input("What type of armor do you have? ")
         block_value = input("How much does it block? ")
 
@@ -57,21 +52,18 @@ class Arena:
             #add_item = input("[1] Add ability\n[2] Add weapon\n[3] Add armor\n[4] Done adding items\n\nYour choice: ")
             add_item = input("[1] Add ability\n[2] Add weapon\n[3] Add armor\n[4] Done adding items\n\nYour choice: ")
             if add_item == "1":
-               #TODO add an ability to the hero
-               #HINT: First create the ability, then add it to the hero
+               
                
                self.create_ability()
                hero.add_ability(self.create_ability())
 
             elif add_item == "2":
-               #TODO add a weapon to the hero
-               #HINT: First create the weapon, then add it to the hero
+               
                self.create_weapon()
                hero.add_weapon(self.create_weapon)
 
             elif add_item == "3":
-               #TODO add an armor to the hero
-               #HINT: First create the armor, then add it to the hero
+               
                self.create_armor()
                hero.add_armor(self.create_armor)
             elif add_item == "4":
@@ -82,10 +74,10 @@ class Arena:
    
     def build_team_one(self):
         '''Prompt the user to build team_one '''
-        # This method should allow a user to create team one.
-        # Prompt the user for the number of Heroes on team one
-        # call self.create_hero() for every hero that the user wants to add to team one.
-        # Add the created hero to team one.
+
+        team_name = input("What is the team name for first team? ")
+        self.team_one = Team(team_name)
+       
         numOfTeamMembers = int(input("How many members would you like on Team One?\n"))
         for i in range(numOfTeamMembers):
             hero = self.create_hero()
@@ -93,6 +85,9 @@ class Arena:
 
     def build_team_two(self):
         '''Prompt the user to build team_two'''
+        team_name = input("What is the team name for second team? ")
+        self.team_two = Team(team_name)
+
         
         numOfTeamMembers = int(input("How many members would you like on Team Two?\n"))
         for i in range(numOfTeamMembers):

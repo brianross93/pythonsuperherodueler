@@ -15,7 +15,7 @@ class Armor:
       ''' Return a value between 0 and the value set by self.max_damage.'''
 
       # Pick a random value between 0 and self.max_damage
-      block_value = random.randint(0,self.max_block)
+      block_value = random.randint(0,int(self.max_block))
       return block_value
 
 if __name__ == "__main__":
