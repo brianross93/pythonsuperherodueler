@@ -49,8 +49,7 @@ class Team:
 
     def revive_heroes(self):
         ''' Reset all heroes health to starting_health'''
-        # TODO: for each hero in self.heroes,
-        # set the hero's current_health to their starting_health
+        
         for hero in self.heroes:
             hero.current_health = hero.starting_health
 
@@ -67,11 +66,7 @@ class Team:
             living_opponents.append(hero)
 
         while len(living_heroes) > 0 and len(living_opponents)> 0:
-            # TODO: Complete the following steps:
-            # 1) Randomly select a living hero from each team (hint: look up what random.choice does)
-            # 2) have the heroes fight each other (Hint: Use the fight method in the Hero class.)
-            # 3) update the list of living_heroes and living_opponents
-            # to reflect the result of the fight
+            
             fighting_hero = random.choice(living_heroes)
             fighting_opponent = random.choice(living_opponents)
             fighting_hero.fight(fighting_opponent)

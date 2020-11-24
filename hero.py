@@ -31,9 +31,7 @@ class Hero:
     def fight(self, opponent):  
         ''' Current Hero will take turns fighting the opponent hero passed in.
         '''
-        # TODO: Fight each hero until a victor emerges.
-        # Phases to implement:
-        # 0) check if at least one hero has abilities. If no hero has abilities, print "Draw"
+       
 
 
 
